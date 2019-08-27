@@ -6,13 +6,58 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-    <h1 id="intro">Hello Everyone</h1>
-    <p>What is your name?</p>
-    <input type="text" id="name"><button id="buttonName">Set</button>
+    <div>
+        <h1 id="intro" class="uc">Hello Everyone</h1>
+        <p>What is your name?</p>
+        <input type="text" id="name"><button id="buttonName">Set</button>
+    </div>
+    <form id="empty-form" method="post" action="save_data"></form>
+    <form  method="post" action="save_data">
+        <div>
+            <label class="biglable" for="inp-name">Full Name</label>
+            <input type="name" id="inp-name" placeholder="e.g Amiel Cohen"/>
+        </div>
+        <div>
+            <label class="biglable" id="lable-for-color" for="inp-color">Full Name</label>
+            <input type="color" id="inp-color" placeholder="e.g green"/>
+        </div>
+        <div>
+            <label class="" for="inp-email">Email</label>
+            <input type="email" id="inp-email" placeholder="ami@el.co.il"/>
+        </div>
+        <div>
+            <input type="submit" value="save">
+        </div>
+    </form>
+    <div id="myTable">
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
+    </div>
+    <div id="pInline">
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+        <p>hello world</p>
+    </div>
 </body>
 <script>
     function app() {
-        function printName(e) {
+        function printName() {
             var myName = document.getElementById("name").value;
             document.getElementById("intro").innerHTML = 'Hello ' + myName;
         }
